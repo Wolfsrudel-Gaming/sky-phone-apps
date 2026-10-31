@@ -7,12 +7,13 @@ eine eigene FiveM-Resource. Man kopiert sie in `resources/` und startet sie nach
 | App                | Beschreibung                                              | Status                |
 | ------------------ | --------------------------------------------------------- | --------------------- |
 | [Snitch](snitch/)  | Livestreaming mit Chat, Spenden, Steuern und Einnahmen     | Phase 1, ungetestet in FiveM |
+| [Shadow](shadow/)  | Illegales, anonymes Board für Kriminelle mit PIN und Polizei-Auswertung | ungetestet in FiveM |
 
 ## Aufbau
 
 ```
-snitch/            fertige Resource (inkl. gebauter Oberfläche in snitch/web)
-src/snitch/        Quellcode der Oberfläche (Vue 3, Vite, TypeScript)
+snitch/, shadow/   fertige Resources (inkl. gebauter Oberfläche in */web)
+src/<app>/         Quellcode der Oberflächen (Vue 3, Vite, TypeScript)
 tests/             Tests für die Server-Logik (Lua 5.4)
 ```
 
@@ -52,6 +53,7 @@ Die Server-Logik wird ohne FiveM getestet:
 ```bash
 lua5.4 tests/split_test.lua
 lua5.4 tests/server_flow_test.lua
+lua5.4 tests/shadow_flow_test.lua
 ```
 
 ## Regeln für neue Apps
